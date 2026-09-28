@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications · Richards O. Okiemute</title>
+<meta name="description" content="Peer-reviewed publications by Richards O. Okiemute on artificial intelligence, energy systems, petroleum engineering and carbon management.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F7FA; --sheet:#FFFFFF; --ink:#101A2E; --muted:#56627A;
+  --rule:#D2D9E5; --accent:#284B8F; --accent-ink:#FFFFFF; --wash:#E8EDF6;
+  --feat-bg:#14213D; --feat-ink:#F4F6FA; --feat-muted:#B7C2D8; --numeral:#C3CEE3;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0E1524; --sheet:#141D30; --ink:#E7ECF5; --muted:#9AA6BC;
+    --rule:#26324A; --accent:#8DB4F0; --accent-ink:#0E1524; --wash:#1A2640;
+    --feat-bg:#E7ECF5; --feat-ink:#101A2E; --feat-muted:#3D4A63; --numeral:#33456B;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.6}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:2px}
+
+.layout{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:280px minmax(0,1fr);gap:64px;padding:72px 32px 96px}
+
+/* Sidebar: the scholar's title page */
+aside{position:sticky;top:72px;align-self:start;font-family:var(--sans);font-size:16px}
+aside h1{font-family:var(--serif);font-size:36px;line-height:1.12;margin:0 0 10px;font-weight:700;letter-spacing:-.01em}
+.role{color:var(--muted);margin:0 0 24px}
+aside h2{font-size:15px;font-weight:600;margin:28px 0 8px;color:var(--ink)}
+aside ul{list-style:none;margin:0;padding:0}
+aside li{padding:3px 0;color:var(--muted)}
+.count{border-top:3px double var(--ink);margin-top:32px;padding-top:14px;display:flex;gap:28px}
+.count b{display:block;font-family:var(--serif);font-size:30px;line-height:1.1}
+.count span{color:var(--muted);font-size:14px}
+
+/* Main column */
+.intro{margin:0 0 48px;max-width:62ch}
+.intro p{margin:0}
+section+section{margin-top:56px}
+/* The year is the page's one bold typographic move: a large light numeral heading each group */
+main h2.year{display:flex;align-items:baseline;gap:14px;font-family:var(--serif);font-size:52px;line-height:1;font-weight:700;letter-spacing:-.02em;color:var(--numeral);margin:0 0 22px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+main h2.year small{font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:0;color:var(--muted)}
+
+article{background:var(--sheet);border:1px solid var(--rule);border-left:4px solid var(--accent);padding:22px 26px;margin:0 0 20px;border-radius:2px}
+article h3{font-size:21px;line-height:1.3;margin:0 0 8px;font-weight:600}
+.authors{margin:0;font-size:16.5px}
+.authors strong{font-weight:700}
+.venue{margin:4px 0 0;color:var(--muted);font-size:16.5px}
+.venue em{color:var(--ink)}
+.summary{margin:12px 0 0;font-size:16.5px;max-width:64ch}
+
+/* Alternating contrast: one dark feature block, then cards alternating white / tinted */
+article.alt{background:var(--wash);border-left-color:var(--ink)}
+article.alt .bib{background:var(--sheet)}
+article.current{background:var(--feat-bg);color:var(--feat-ink);border-color:var(--feat-bg);border-left-color:#7FA2E0;padding:28px 30px}
+article.current h3{font-size:23px}
+article.current .authors,article.current .summary,article.current .venue em{color:var(--feat-ink)}
+article.current .venue{color:var(--feat-muted)}
+article.current .btn.primary{background:var(--feat-ink);color:var(--feat-bg);border-color:var(--feat-ink)}
+
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;font-family:var(--sans);font-size:15px;align-items:center}
+.btn,summary{display:inline-block;padding:6px 14px;border:1px solid var(--accent);border-radius:3px;text-decoration:none;cursor:pointer;background:transparent;color:var(--accent);font:600 15px var(--sans);list-style:none}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn:hover,summary:hover{background:var(--wash)}
+.btn.primary:hover{background:var(--accent);filter:brightness(1.12)}
+summary::-webkit-details-marker{display:none}
+details[open]>summary{background:var(--wash)}
+details.cite{flex-basis:100%}
+details.cite>summary{display:inline-block}
+.bib{margin-top:12px;background:var(--wash);border:1px solid var(--rule);border-radius:3px;padding:14px 16px}
+.bib pre{margin:0;overflow-x:auto;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre;color:var(--ink)}
+.bib button{margin-top:12px}
+.doi{font-family:var(--sans);font-size:14px;color:var(--muted);margin-left:2px}
+
+footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--rule);font-family:var(--sans);font-size:14px;color:var(--muted)}
+
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr;gap:40px;padding:40px 20px 72px}
+  aside{position:static}
+  article{padding:18px}
+  main h2.year{font-size:40px}
+}
+@media print{.actions{display:none}.layout{display:block}article{break-inside:avoid;border:0;border-left:2px solid #000}}
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside>
+    <h1>Richards O. Okiemute</h1>
+    <p class="role">Cloud systems engineer and researcher. Trained in petroleum engineering; working at the intersection of AI and energy.</p>
+
+    <!-- Add profile links here if wanted: ORCID, Google Scholar, LinkedIn, GitHub -->
+
+    <h2>Research areas</h2>
+    <ul>
+      <li>AI for energy systems</li>
+      <li>Machine learning and predictive maintenance</li>
+      <li>Nuclear fusion and sustainable energy</li>
+      <li>Enhanced oil recovery and drilling fluids</li>
+      <li>Carbon capture and storage</li>
+    </ul>
+
+    <div class="count">
+      <div><b>7</b><span>publications</span></div>
+      <div><b>2024–26</b><span>years active</span></div>
+    </div>
+  </aside>
+
+  <main>
+    <div class="intro">
+      <p>Peer-reviewed papers and reviews on applying data science, machine learning and engineering methods to energy and environmental problems. Each entry links to the published version, and a BibTeX record is available under <em>Cite</em>.</p>
+    </div>
+
+    <section aria-labelledby="current">
+      <h2 class="year" id="current" style="font-size:34px">Current research</h2>
+      <article class="current">
+        <h3>African Nuclear Standards and Technology Development Initiative</h3>
+        <p class="authors"><strong>Richards Okiemute</strong>, Fellow</p>
+        <p class="venue"><em>ASME Engineering for Change (E4C) Fellowship</em>, in partnership with the American Society of Mechanical Engineers (ASME). Ongoing.</p>
+        <p class="summary">A structured assessment of the nuclear energy landscape across African nations: mapping national energy plans and key stakeholders, documenting knowledge gaps in nuclear technology standards, and reviewing the investment landscape. The output is a region-specific intelligence package to guide standards development and Africa–EU collaboration.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://www.engineeringforchange.org/projects/african-nuclear-standards-and-technology-development-initiative/#overview">View project page</a>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="y2026">
+      <h2 class="year" id="y2026">2026 <small>in press</small></h2>
+
+      <article>
+        <h3>Artificial Intelligence in Subsurface Energy Systems: A Comprehensive Review of CO₂ Storage, Hydrogen Storage, and Geothermal Energy</h3>
+        <p class="authors"><strong>Okiemute, R. O.*</strong>, Oyetunji, O. S., Yakubu, K. S., Ibrahim, U. F., Olude, D. A., &amp; Abubakar, A.</p>
+        <p class="venue"><em>Science World Journal</em>, 21(3). In press, 2026. Scheduled for publication by 30 September 2026.</p>
+        <p class="venue">*Corresponding author</p>
+        <div class="actions">
+          <!-- When published, add: <a class="btn primary" href="ARTICLE_URL">View article</a> and the DOI, and change "In press" above. -->
+          <details class="cite">
+            <summary>Cite</summary>
+            <div class="bib">
+<pre id="bib7">@article{okiemute2026subsurface,
+  author  = {Okiemute, R. O. and Oyetunji, O. S. and Yakubu, K. S. and Ibrahim, U. F. and Olude, D. A. and Abubakar, A.},
+  title   = {Artificial Intelligence in Subsurface Energy Systems: A Comprehensive Review of {CO$_2$} Storage, Hydrogen Storage, and Geothermal Energy},
+  journal = {Science World Journal},
+  volume  = {21},
+  number  = {3},
+  year    = {2026},
+  note    = {In press}
+}</pre>
+              <button class="btn" data-copy="bib7">Copy BibTeX</button>
+            </div>
+          </details>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="y2025">
+      <h2 class="year" id="y2025">2025</h2>
+
+      <article>
+        <h3>Application of Artificial Intelligence in Shaping the Future of Sustainable Nuclear Fusion Energy</h3>
+        <p class="authors">Emmanuel, E. T., Thanni, A. A., Jimson, I. O., <strong>Okiemute, R. O.</strong>, et al.</p>
+        <p class="venue"><em>World Journal of Advances in Engineering and Technology Studies (WJAETS)</em>, 17(01), 041–060. 2025.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://doi.org/10.30574/wjaets.2025.17.1.1378">View article</a>
+          <span class="doi">DOI 10.30574/wjaets.2025.17.1.1378</span>
+          <details class="cite">
+            <summary>Cite</summary>
+            <div class="bib">
+<pre id="bib1">@article{emmanuel2025fusion,
+  author  = {Emmanuel, E. T. and Thanni, A. A. and Jimson, I. O. and Okiemute, R. O. and others},
+  title   = {Application of Artificial Intelligence in Shaping the Future of Sustainable Nuclear Fusion Energy},
+  journal = {World Journal of Advances in Engineering and Technology Studies},
+  volume  = {17},
+  number  = {1},
+  pages   = {041--060},
+  year    = {2025},
+  doi     = {10.30574/wjaets.2025.17.1.1378}
+}</pre>
+              <button class="btn" data-copy="bib1">Copy BibTeX</button>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="alt">
+        <h3>Leveraging Machine Learning and Data Analytics for Equipment Reliability in Oil and Gas Using Predictive Maintenance</h3>
+        <p class="authors">Ekunke, O. V., <strong>Okiemute, R. O.</strong>, et al.</p>
+        <p class="venue"><em>World Journal of Applied Research</em>. January 2025.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://doi.org/10.30574/wjarr.2025.25.1.0295">View article</a>
+          <span class="doi">DOI 10.30574/wjarr.2025.25.1.0295</span>
+          <details class="cite">
+            <summary>Cite</summary>
+            <div class="bib">
+<pre id="bib2">@article{ekunke2025predictive,
+  author  = {Ekunke, O. V. and Okiemute, R. O. and others},
+  title   = {Leveraging Machine Learning and Data Analytics for Equipment Reliability in Oil and Gas Using Predictive Maintenance},
+  journal = {World Journal of Applied Research},
+  month   = jan,
+  year    = {2025},
+  doi     = {10.30574/wjarr.2025.25.1.0295}
+}</pre>
+              <button class="btn" data-copy="bib2">Copy BibTeX</button>
+            </div>
+          </details>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="y2024">
+      <h2 class="year" id="y2024">2024</h2>
+
+      <article class="alt">
+        <h3>Investigation into the Feasibility and Efficiency of Implementing Carbon Capture and Storage Technologies in Downstream Facilities: To Mitigate Greenhouse Gas Emissions</h3>
+        <p class="authors">Godwin, E. O., Odey, P. O., <strong>Okiemute, R. O.</strong>, Owunna, I. B., et al.</p>
+        <p class="venue"><em>World Journal of Advanced Research and Reviews</em>. November 2024.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://doi.org/10.30574/wjarr.2024.24.2.3438">View article</a>
+          <span class="doi">DOI 10.30574/wjarr.2024.24.2.3438</span>
+          <details class="cite">
+            <summary>Cite</summary>
+            <div class="bib">
+<pre id="bib3">@article{godwin2024ccs,
+  author  = {Godwin, E. O. and Odey, P. O. and Okiemute, R. O. and Owunna, I. B. and others},
+  title   = {Investigation into the Feasibility and Efficiency of Implementing Carbon Capture and Storage Technologies in Downstream Facilities: To Mitigate Greenhouse Gas Emissions},
+  journal = {World Journal of Advanced Research and Reviews},
+  month   = nov,
+  year    = {2024},
+  doi     = {10.30574/wjarr.2024.24.2.3438}
+}</pre>
+              <button class="btn" data-copy="bib3">Copy BibTeX</button>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article>
+        <h3>Enhanced Oil Recovery Methods Using Biodegradable Materials in Different Reservoirs</h3>
+        <p class="authors">Ekunke, O. V., Nzereogu, S. K., Uyanah, J. J., <strong>Okiemute, R. O.</strong>, et al.</p>
+        <p class="venue"><em>Global Scientific Journal (GSJ)</em>, 12(9). September 2024.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://www.globalscientificjournal.com/researchpaper/ENHANCED_OIL_RECOVERY_METHODS_USING_BIODEGRADABLE_MATERIALS_IN_DIFFERENT_RESERVOIRS_.pdf">Read PDF</a>
+          <details class="cite">
+            <summary>Cite</summary>
+            <div class="bib">
+<pre id="bib4">@article{ekunke2024eor,
+  author  = {Ekunke, O. V. and Nzereogu, S. K. and Uyanah, J. J. and Okiemute, R. O. and others},
+  title   = {Enhanced Oil Recovery Methods Using Biodegradable Materials in Different Reservoirs},
+  journal = {Global Scientific Journal},
+  volume  = {12},
+  number  = {9},
+  month   = sep,
+  year    = {2024}
+}</pre>
+              <button class="btn" data-copy="bib4">Copy BibTeX</button>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article class="alt">
+        <h3>Advancements in Eco-friendly Drilling Fluids: A Review of Recent Innovations and Their Environmental Impacts</h3>
+        <p class="authors">Ekunke, O. V., Nzereogu, S. K., Oluyimika, J. O., <strong>Okiemute, R. O.</strong>, et al.</p>
+        <p class="venue"><em>International Journal of Advances in Engineering and Management (IJAEM)</em>. September 2024.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://ijaem.net/issue_dcp/Advancing%20the%20Use%20of%20Marine%20Algae%20as%20a%20Carbon%20Sink%20and%20Bio%20fuel%20Source%20in%20Offshore%20Oil%20and%20Gas%20Operations..pdf">Read PDF</a>
+          <details class="cite">
+            <summary>Cite</summary>
+            <div class="bib">
+<pre id="bib5">@article{ekunke2024drilling,
+  author  = {Ekunke, O. V. and Nzereogu, S. K. and Oluyimika, J. O. and Okiemute, R. O. and others},
+  title   = {Advancements in Eco-friendly Drilling Fluids: A Review of Recent Innovations and Their Environmental Impacts},
+  journal = {International Journal of Advances in Engineering and Management},
+  month   = sep,
+  year    = {2024}
+}</pre>
+              <button class="btn" data-copy="bib5">Copy BibTeX</button>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <article>
+        <h3>Identifying Internet of Things Devices through Unique Digital Signatures and Advanced Machine Learning Techniques</h3>
+        <p class="authors">Akintayo, T. A., <strong>Okiemute, R. O.</strong>, et al.</p>
+        <p class="venue"><em>Path of Science</em>, 10(7). July 2024.</p>
+        <div class="actions">
+          <a class="btn primary" href="https://pathofscience.org/index.php/ps/article/view/3201">View article</a>
+          <details class="cite">
+            <summary>Cite</summary>
+            <div class="bib">
+<pre id="bib6">@article{akintayo2024iot,
+  author  = {Akintayo, T. A. and Okiemute, R. O. and others},
+  title   = {Identifying Internet of Things Devices through Unique Digital Signatures and Advanced Machine Learning Techniques},
+  journal = {Path of Science},
+  volume  = {10},
+  number  = {7},
+  month   = jul,
+  year    = {2024}
+}</pre>
+              <button class="btn" data-copy="bib6">Copy BibTeX</button>
+            </div>
+          </details>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <span id="yr"></span> Richards O. Okiemute. Links point to the publishers' own pages; copyright remains with the respective journals and authors.
+    </footer>
+  </main>
+</div>
+
+<script>
+document.getElementById('yr').textContent = '\u00A9 ' + new Date().getFullYear();
+document.querySelectorAll('[data-copy]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var text = document.getElementById(btn.dataset.copy).textContent;
+    var done = function () {
+      btn.textContent = 'Copied';
+      setTimeout(function () { btn.textContent = 'Copy BibTeX'; }, 1800);
+    };
+    if (navigator.clipboard) { navigator.clipboard.writeText(text).then(done); }
+    else {
+      var ta = document.createElement('textarea'); ta.value = text;
+      document.body.appendChild(ta); ta.select(); document.execCommand('copy');
+      document.body.removeChild(ta); done();
+    }
+  });
+});
+</script>
+</body>
+</html>
