@@ -3,30 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Publications · Richards O. Okiemute</title>
-<meta name="description" content="Explore peer-reviewed publications by Richards O. Okiemute on application of artificial intelligence in energy systems, energy systems, Carbon Capture Utilization and Storage (CCUS), renewable energy, petroleum engineering, and carbon management.">
+<title>Publications & Experience · Richards O. Okiemute</title>
+<meta name="description" content="Explore peer-reviewed publications and research experience by Richards O. Okiemute on Geo-energy (H2 and CCUS) research, sustainable energy systems, and mild AI applications in energy systems.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#F5F7FA; --sheet:#FFFFFF; --ink:#101A2E; --muted:#56627A;
-  --rule:#D2D9E5; --accent:#284B8F; --accent-ink:#FFFFFF; --wash:#E8EDF6;
-  --feat-bg:#14213D; --feat-ink:#F4F6FA; --feat-muted:#B7C2D8; --numeral:#C3CEE3;
+  --paper:#F4F6F9; --sheet:#FFFFFF; --ink:#111827; --muted:#4B5563;
+  --rule:#E5E7EB; --accent:#1D4ED8; --accent-ink:#FFFFFF; --wash:#EEF2F6;
+  --feat-bg:#1E3A8A; --feat-ink:#F9FAFB; --feat-muted:#93C5FD; --numeral:#D1D5DB;
   --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
   --sans:"Source Sans 3",system-ui,-apple-system,"Segoe UI",sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]){
-    --paper:#0E1524; --sheet:#141D30; --ink:#E7ECF5; --muted:#9AA6BC;
-    --rule:#26324A; --accent:#8DB4F0; --accent-ink:#0E1524; --wash:#1A2640;
-    --feat-bg:#E7ECF5; --feat-ink:#101A2E; --feat-muted:#3D4A63; --numeral:#33456B;
-  }
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.6}
+body{
+  margin:0;
+  background-color: var(--paper);
+  background-image: 
+    radial-gradient(circle at 12% 15%, rgba(29, 78, 216, 0.04) 0%, transparent 45%),
+    linear-gradient(rgba(0, 0, 0, 0.012) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.012) 1px, transparent 1px);
+  background-size: 100% 100%, 36px 36px, 36px 36px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.6;
+}
 a{color:var(--accent);text-underline-offset:3px}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:2px}
 
@@ -34,59 +39,87 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 /* Sidebar: the scholar's title page */
 aside{position:sticky;top:72px;align-self:start;font-family:var(--sans);font-size:16px}
-aside h1{font-family:var(--serif);font-size:36px;line-height:1.12;margin:0 0 10px;font-weight:700;letter-spacing:-.01em}
-.role{color:var(--muted);margin:0 0 24px}
-aside h2{font-size:15px;font-weight:600;margin:28px 0 8px;color:var(--ink)}
+aside h1{font-family:var(--serif);font-size:32px;line-height:1.15;margin:0 0 12px;font-weight:700;letter-spacing:-.01em;white-space:nowrap;color:var(--ink)}
+.role{color:var(--muted);margin:0 0 20px}
+aside h2{font-size:15px;font-weight:600;margin:24px 0 8px;color:var(--ink)}
 aside ul{list-style:none;margin:0;padding:0}
 aside li{padding:3px 0;color:var(--muted)}
-.count{border-top:3px double var(--ink);margin-top:32px;padding-top:14px;display:flex;gap:28px}
-.count b{display:block;font-family:var(--serif);font-size:30px;line-height:1.1}
+aside .profile-links{margin-bottom:20px;display:flex;flex-direction:column;gap:6px;font-size:14.5px}
+
+.count{border-top:3px double var(--rule);margin-top:32px;padding-top:14px;display:flex;gap:28px}
+.count b{display:block;font-family:var(--serif);font-size:30px;line-height:1.1;color:var(--ink)}
 .count span{color:var(--muted);font-size:14px}
+
+/* Navigation Jumps right under the counts */
+.nav-jumps{margin-top:16px;padding-top:14px;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:6px;font-size:14px;}
+.nav-jumps span{font-weight:600;color:var(--ink);font-size:13px;letter-spacing:0.05em;text-transform:uppercase;}
+.nav-jumps a{color:var(--muted);text-decoration:none;font-weight:600;transition:color 0.2s;}
+.nav-jumps a:hover{color:var(--accent);text-decoration:underline;}
 
 /* Main column */
 .intro{margin:0 0 48px;max-width:62ch}
-.intro p{margin:0}
+.intro p{margin:0;color:var(--muted)}
 section+section{margin-top:56px}
-/* The year is the page's one bold typographic move: a large light numeral heading each group */
 main h2.year{display:flex;align-items:baseline;gap:14px;font-family:var(--serif);font-size:52px;line-height:1;font-weight:700;letter-spacing:-.02em;color:var(--numeral);margin:0 0 22px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
 main h2.year small{font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:0;color:var(--muted)}
 
-article{background:var(--sheet);border:1px solid var(--rule);border-left:4px solid var(--accent);padding:22px 26px;margin:0 0 20px;border-radius:2px}
-article h3{font-size:21px;line-height:1.3;margin:0 0 8px;font-weight:600}
-.authors{margin:0;font-size:16.5px}
-.authors strong{font-weight:700}
+article{background:var(--sheet);border:1px solid var(--rule);border-left:4px solid var(--accent);padding:22px 26px;margin:0 0 20px;border-radius:4px;box-shadow: 0 1px 3px rgba(0,0,0,0.04)}
+article h3{font-size:21px;line-height:1.3;margin:0 0 8px;font-weight:600;color:var(--ink)}
+.authors{margin:0;font-size:16.5px;color:var(--muted)}
+.authors strong{font-weight:700;color:var(--ink)}
 .venue{margin:4px 0 0;color:var(--muted);font-size:16.5px}
 .venue em{color:var(--ink)}
-.summary{margin:12px 0 0;font-size:16.5px;max-width:64ch}
+.summary{margin:12px 0 0;font-size:16.5px;max-width:64ch;color:var(--muted)}
 
-/* Alternating contrast: one dark feature block, then cards alternating white / tinted */
-article.alt{background:var(--wash);border-left-color:var(--ink)}
+/* Experience block styling */
+.experience-item {margin-bottom: 24px;}
+.experience-item:last-child {margin-bottom: 0;}
+.experience-item h4 {font-size: 18px; margin: 0 0 4px; font-weight: 600; font-family: var(--sans); color: var(--ink);}
+.experience-meta {font-family: var(--sans); font-size: 14.5px; color: var(--accent); margin-bottom: 8px; font-weight: 600;}
+.experience-details {font-family: var(--sans); font-size: 15px; margin: 0; padding-left: 20px;}
+.experience-details li {margin-bottom: 6px; color: var(--muted);}
+
+/* Alternating contrast blocks */
+article.alt{background:var(--wash);border-left-color:var(--muted)}
 article.alt .bib{background:var(--sheet)}
-article.current{background:var(--feat-bg);color:var(--feat-ink);border-color:var(--feat-bg);border-left-color:#7FA2E0;padding:28px 30px}
-article.current h3{font-size:23px}
-article.current .authors,article.current .summary,article.current .venue em{color:var(--feat-ink)}
+article.current{background:var(--feat-bg);color:var(--feat-ink);border-color:var(--feat-bg);border-left-color:#60A5FA;padding:28px 30px}
+article.current h3{font-size:23px;color:var(--feat-ink)}
+article.current .authors{font-family:var(--sans);font-size:16.5px;color:var(--feat-muted)}
+article.current .authors strong{color:var(--feat-ink);font-weight:700;}
+article.current .summary,article.current .venue em{color:var(--feat-ink)}
 article.current .venue{color:var(--feat-muted)}
 article.current .btn.primary{background:var(--feat-ink);color:var(--feat-bg);border-color:var(--feat-ink)}
 
 .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;font-family:var(--sans);font-size:15px;align-items:center}
-.btn,summary{display:inline-block;padding:6px 14px;border:1px solid var(--accent);border-radius:3px;text-decoration:none;cursor:pointer;background:transparent;color:var(--accent);font:600 15px var(--sans);list-style:none}
-.btn.primary{background:var(--accent);color:var(--accent-ink)}
-.btn:hover,summary:hover{background:var(--wash)}
-.btn.primary:hover{background:var(--accent);filter:brightness(1.12)}
+.btn,summary{display:inline-block;padding:6px 14px;border:1px solid var(--rule);border-radius:4px;text-decoration:none;cursor:pointer;background:transparent;color:var(--accent);font:600 15px var(--sans);list-style:none}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn:hover,summary:hover{background:var(--wash);border-color:var(--accent)}
+.btn.primary:hover{filter:brightness(1.1)}
 summary::-webkit-details-marker{display:none}
 details[open]>summary{background:var(--wash)}
 details.cite{flex-basis:100%}
 details.cite>summary{display:inline-block}
-.bib{margin-top:12px;background:var(--wash);border:1px solid var(--rule);border-radius:3px;padding:14px 16px}
+.bib{margin-top:12px;background:var(--wash);border:1px solid var(--rule);border-radius:4px;padding:14px 16px}
 .bib pre{margin:0;overflow-x:auto;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;white-space:pre;color:var(--ink)}
 .bib button{margin-top:12px}
 .doi{font-family:var(--sans);font-size:14px;color:var(--muted);margin-left:2px}
+
+/* Enhanced Dropdown Containers */
+details.exp-dropdown {background: var(--sheet); border: 1px solid var(--rule); border-left: 4px solid var(--accent); border-radius: 4px; padding: 20px 24px; margin-top: 40px; box-shadow: 0 1px 4px rgba(0,0,0,0.04); transition: border-color 0.2s;}
+details.exp-dropdown:hover {border-color: var(--accent); background: var(--wash);}
+details.exp-dropdown summary {font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--ink); border: none; padding: 0; background: transparent !important; display: flex; align-items: center; justify-content: space-between; user-select: none;}
+details.exp-dropdown summary::after {content: "▼"; font-family: var(--sans); font-size: 14px; color: var(--accent); transition: transform 0.2s; margin-left: 12px;}
+details.exp-dropdown[open] summary::after {transform: rotate(180deg);}
+details.exp-dropdown summary:hover {color: var(--accent); background: transparent !important;}
+.exp-hint {display: block; font-family: var(--sans); font-size: 13.5px; font-weight: 400; color: var(--muted); margin-top: 4px;}
+.exp-content {margin-top: 20px; border-top: 1px solid var(--rule); padding-top: 20px;}
 
 footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--rule);font-family:var(--sans);font-size:14px;color:var(--muted)}
 
 @media (max-width:860px){
   .layout{grid-template-columns:1fr;gap:40px;padding:40px 20px 72px}
   aside{position:static}
+  aside h1{white-space:normal;}
   article{padding:18px}
   main h2.year{font-size:40px}
 }
@@ -98,35 +131,47 @@ footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--rule);font-fa
 
   <aside>
     <h1>Richards O. Okiemute</h1>
-    <p class="role">Energy researcher. Utilizing interdisciplinary research experience in advancing AI and energy research.</p>
+    
+    <div class="profile-links">
+      <a href="https://www.researchgate.net/profile/Richards-Okiemute-2" target="_blank" rel="noopener">ResearchGate Profile</a>
+      <a href="https://orcid.org/0009-0009-3644-5814" target="_blank" rel="noopener">ORCID Record</a>
+      <a href="mailto:richards.okiemute@gmaill.com">Contact via Email</a>
+    </div>
 
-    <!-- Add profile links here if wanted: ORCID, Google Scholar, LinkedIn, GitHub -->
+    <p class="role">Geo-energy researcher specializing in Hydrogen storage, CCUS, and subsurface AI systems.</p>
 
     <h2>Research Interests:</h2>
     <ul>
-      <li>AI for energy systems</li>
-      <li>Geo-energy (CCUS and Hydrogen storage</li>
-      <li>Renewable energy and Next-Gen Energy (P2X)</li>
-  
-      
+      <li>Geo-energy (CCUS and Hydrogen storage)</li>
+      <li>Sustainable energy &amp; Next-Gen systems (P2X)</li>
+      <li>Applied AI in energy systems (mild)</li>
     </ul>
 
     <div class="count">
       <div><b>7</b><span>publications</span></div>
       <div><b>2024–26</b><span>years active</span></div>
     </div>
+
+    <div class="nav-jumps">
+      <span>Quick Jumps:</span>
+      <a href="#publications-block">↓ Publications</a>
+      <a href="#experience-section">↓ Research &amp; Fellowship Experience</a>
+      <a href="#education-section">↓ Education</a>
+    </div>
   </aside>
 
   <main>
     <div class="intro">
-      <p>Explore Richards Okiemute's peer-reviewed publications on the application of artificial intelligence in energy systems, Geo-energy (CCUS and H2 storage), renewable energy, and petroleum engineering.</p>
+      <p>Explore Richards Okiemute's peer-reviewed publications on Geo-energy (CCUS and Hydrogen storage), sustainable energy systems, and applied computational methods.</p>
     </div>
+
+    <div id="publications-block"></div>
 
     <section aria-labelledby="current">
       <h2 class="year" id="current" style="font-size:34px">Current research</h2>
       <article class="current">
         <h3>African Nuclear Standards and Technology Development Initiative</h3>
-        <p class="authors"><strong>Richards Okiemute</strong>, Fellow</p>
+        <p class="authors"><strong>Richards Okiemute</strong>, Research Fellow</p>
         <p class="venue"><em>ASME Engineering for Change (E4C) Fellowship</em>, in partnership with the American Society of Mechanical Engineers (ASME). Ongoing.</p>
         <p class="summary">A structured assessment of the nuclear energy landscape across African nations: mapping national energy plans and key stakeholders, documenting knowledge gaps in nuclear technology standards, and reviewing the investment landscape. The output is a region-specific intelligence package to guide standards development and Africa–EU collaboration.</p>
         <div class="actions">
@@ -144,7 +189,6 @@ footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--rule);font-fa
         <p class="venue"><em>Science World Journal</em>, 21(3). In press, 2026. Scheduled for publication by 30 September 2026.</p>
         <p class="venue">*Corresponding author</p>
         <div class="actions">
-          <!-- When published, add: <a class="btn primary" href="ARTICLE_URL">View article</a> and the DOI, and change "In press" above. -->
           <details class="cite">
             <summary>Cite</summary>
             <div class="bib">
@@ -314,6 +358,121 @@ footer{margin-top:64px;padding-top:16px;border-top:1px solid var(--rule);font-fa
           </details>
         </div>
       </article>
+    </section>
+
+    <!-- Research and Fellowship Experience Dropdown Section -->
+    <section aria-labelledby="experience-section" id="experience-section">
+      <details class="exp-dropdown">
+        <summary>
+          <span>Research and Fellowship Experience</span>
+          <span class="exp-hint">(Click to expand / collapse)</span>
+        </summary>
+        <div class="exp-content">
+          <div class="experience-item">
+            <h4>Research Fellow | ASME Engineering for Change (E4C) Fellowship</h4>
+            <p class="experience-meta">May 2026 – Nov 2026</p>
+            <ul class="experience-details">
+              <li>Conducting desktop research on Africa Nuclear Energy and Technology Development Initiatives across South Africa, Egypt, Nigeria, Ghana, and Kenya.</li>
+              <li>Leading research on South Africa’s energy landscape, energy mix including Green Hydrogen, biomass, hydropower, solar energy, CSP, wind power, and emerging energy technologies (P2X, EVs).</li>
+              <li>Developing Stakeholders Mapping database and evaluating local/international supply chains in South Africa's energy ecosystem.</li>
+            </ul>
+          </div>
+          
+          <div class="experience-item" style="margin-top:24px;">
+            <h4>Graduate Research Assistant | University of Benin, Nigeria</h4>
+            <p class="experience-meta">Jan 2023 – Nov 2025</p>
+            <ul class="experience-details">
+              <li>Developed CO₂StoreCap, an assistant for estimating storage capacity, assessing trapping and leakage risks, and optimizing injection and monitoring strategies.</li>
+              <li>Designed a K-Means clustering model for lithology classification in sandstone–shale intercalations, enhancing understanding of subsurface heterogeneity.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item" style="margin-top:24px;">
+            <h4>Graduate Research Engineer (Computational Modeling &amp; Systems Optimization) | Welltec Oilfield Services</h4>
+            <p class="experience-meta">Jan 2020 – May 2022</p>
+            <ul class="experience-details">
+              <li>Conducted data collection, cleaning, and transformation for model training and validation.</li>
+              <li>Applied Random Forest, Linear Regression, and XGBoost to automate system performance prediction, achieving an R² score of 97.43% and reducing operational downtime by 15%.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item" style="margin-top:24px;">
+            <h4>Mathematics Teacher | Government Girls Secondary School (UBE), Rivers State, Nigeria (NYSC)</h4>
+            <p class="experience-meta">Feb 2019 – Oct 2020</p>
+            <ul class="experience-details">
+              <li>Taught mathematics to Junior Secondary School classes (age group 8–13 years) for two terms.</li>
+              <li>Improved student passing score by 83% from 45%.</li>
+              <li>Graded over 200 examinations and test scripts.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item" style="margin-top:24px;">
+            <h4>Undergraduate Researcher | Petroleum Training Institute (PTI), Delta State, Nigeria</h4>
+            <p class="experience-meta">Jul 2018 – Sept 2018</p>
+            <ul class="experience-details">
+              <li><strong>Thesis:</strong> Analysis of Water Coning in Vertical Oil Wells in Niger Delta.</li>
+              <li>Performed parametric and sensitivity analysis using four models (Meyer and Garder, Schols, Chaperon, Hoyland et al.) to determine water breakthrough time and critical production rates.</li>
+              <li>Identified Hoyland et al. for optimal production rates and Meyer and Garder for breakthrough time prediction.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item" style="margin-top:24px;">
+            <h4>Undergraduate Researcher (National Diploma) | Petroleum Training Institute (PTI), Delta State, Nigeria</h4>
+            <p class="experience-meta">May 2014 – Oct 2014</p>
+            <ul class="experience-details">
+              <li><strong>Thesis:</strong> Reservoir Pressure Maintenance to Increase Oil Production by Water Injection Method (Obagi Oil Field, OML 58).</li>
+              <li>Conducted case study analyzing historical production and pressure trend data (1964–1996) to evaluate water injection as a secondary recovery method.</li>
+              <li>Performed correlation analysis showing increased injection volumes drove production recovery to 62,625 BOPD.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item" style="margin-top:24px;">
+            <h4>Gas Development &amp; Energy Analyst Intern | Nigeria National Petroleum Corporation (NNPC-NAPIMS)</h4>
+            <p class="experience-meta">Apr 2017 – Sept 2017</p>
+            <ul class="experience-details">
+              <li>Reviewed First E&amp;P's OML 83 &amp; 85 gas development plan and strategy, evaluating phased processing build-out (300 MMscfd initial, scaling to 900 MMscfd) against a joint production forecast plateau of 640 MMscfd.</li>
+              <li>Contributed to review of Assa North Field Development Plan (FDP) and supported gas division's gas flare-out programme compliance tracking.</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <!-- Education Dropdown Section -->
+    <section aria-labelledby="education-section" id="education-section">
+      <details class="exp-dropdown">
+        <summary>
+          <span>Education</span>
+          <span class="exp-hint">(Click to expand / collapse)</span>
+        </summary>
+        <div class="exp-content">
+          <div class="experience-item">
+            <h4>BSc. Petroleum Engineering | University of Benin, Nigeria</h4>
+            <p class="experience-meta">Feb 2015 – Sept 2018</p>
+            <ul class="experience-details">
+              <li><strong>Dissertation:</strong> Analysis of Water Coning in Vertical Oil Wells in Niger Delta, Nigeria.</li>
+              <li><strong>Advisor:</strong> Professor Ohenhen Ikponmwosa.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item" style="margin-top:24px;">
+            <h4>Diploma in Petroleum Engineering Technology | Petroleum Training Institute, Nigeria</h4>
+            <p class="experience-meta">Nov 2011 – Oct 2014</p>
+            <ul class="experience-details">
+              <li><strong>Dissertation:</strong> Reservoir Pressure Maintenance to Improve Oil Production from Depleted Reservoirs.</li>
+              <li><strong>Advisor:</strong> Engr. Frank Egede.</li>
+            </ul>
+            <p style="margin-top:10px; font-family:var(--sans); font-size:15px; color:var(--muted);"><strong>Overall CGPA (WES Evaluated):</strong> <span style="color:var(--ink);">3.39/4.0</span></p>
+          </div>
+
+          <div class="experience-item" style="margin-top:24px;">
+            <h4>Standardized Test Scores</h4>
+            <ul class="experience-details">
+              <li><strong>Graduate Record Examination (GRE):</strong> 333/340 (Verbal: 164, Quantitative: 169, AW: 3.5)</li>
+            </ul>
+          </div>
+        </div>
+      </details>
     </section>
 
     <footer>
